@@ -1,9 +1,10 @@
 import './App.css';
-import Card from './Componants/Cards'
+// import Card from './Componants/Cards'
+import Counter from './ClassComponants/Counter'
 
 
 function App() {
-  const card1 = {
+  /*const card1 = {
     cardTitle: "Mercedes-AMG GLE 53 Coupe",
     imgUrl: "https://i.pinimg.com/564x/10/16/d8/1016d8b877027b1a2a99c03964976999.jpg",
     imgAlt: "Mercedes-AMG GLE 53 Coupe",
@@ -39,7 +40,14 @@ function App() {
         <Card cardTitle={card3.cardTitle} imgUrl={card3.imgUrl} imgAlt={card3.imgAlt} cardText={card3.cardText} />
       </div>
     </div>
-  );
+  );*/
+
+
+  return (
+      <div className="app">
+        <Counter counter={0}/>
+      </div>
+  )
 }
 
 export default App;

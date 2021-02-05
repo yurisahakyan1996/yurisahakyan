@@ -11,7 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+/*
 .cards_div {
   display: flex;
   justify-content: space-evenly;
@@ -35,4 +35,23 @@ img {
   .blocks {
     margin: 30px
   }
+}*/
+
+.app {
+  display: flex;
+  justify-content: center;
+}
+.resultP {
+  font-size: 100px;
+  margin-left: 100px;
+}
+.butt {
+  padding: 20px 30px;
+  border-radius: 5px;
+  margin-left: 20px;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+.counterClass {
+  justify-content: center;
 }
