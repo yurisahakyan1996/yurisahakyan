@@ -1,6 +1,7 @@
 import './App.css';
 // import Card from './Componants/Cards'
-import Counter from './ClassComponants/Counter'
+//import Counter from './ClassComponants/Counter'
+import ToDo from './ClassComponants/ToDo'
 
 
 function App() {
@@ -43,11 +44,17 @@ function App() {
   );*/
 
 
-  return (
+  /*return (
       <div className="app">
         <Counter counter={0}/>
       </div>
-  )
+  )*/
+
+    return (
+        <div>
+            <ToDo />
+        </div>
+    )
 }
 
 export default App;

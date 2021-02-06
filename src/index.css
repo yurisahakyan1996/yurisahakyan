@@ -55,3 +55,39 @@ img {
 .counterClass {
   justify-content: center;
 }
+.todoTasksList {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+.task {
+  border: 2px solid royalblue;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 30px;
+  background-color: royalblue;
+  color: aliceblue;
+  font-family: "Arial Unicode", sans-serif;
+  font-weight: bold;
+}
+.todoInput {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+.todoInput input {
+  border: 1px solid royalblue;
+  border-radius: 10px;
+  padding: 20px;
+}
+.todoInput button {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid royalblue;
+  border-radius: 10px;
+}
+.todoInput button:hover {
+  background-color: royalblue;
+  color: aliceblue;
+}
