@@ -1,7 +1,16 @@
-const Task = ( {todoTask} ) => {
+const Task = ( {inputValue} ) => {
     return (
         <div className="task">
-            {todoTask}
+            <div className='taskP'>
+                <p>{inputValue}</p>
+            </div>
+            <div className='removeButtonDiv'>
+                <button
+                    className='taskRemoveButton'
+                >
+                    Remove task
+                </button>
+            </div>
         </div>
     )
 }
