@@ -1,8 +1,8 @@
 import React from 'react'
+import styles from './AddNewTask.module.css'
 
 class AddNewTask extends React.Component {
     state = {
-        tasks: [],
         inputValue: ''
     }
     handleChange = (e) => {
@@ -15,21 +15,23 @@ class AddNewTask extends React.Component {
             inputValue: ''
         })
     }
-    handleSubmit = (e) => {
-        const {submit} = this.props;
-        const {tasks, inputValue} = this.state;
+    handleS = () => {
+        const {inputValue} = this.state;
+        const { handleSubmit } = this.props;
+
+        handleSubmit(inputValue)
+
         this.setState({
-            tasks: this.state.tasks.push(inputValue)
+            inputValue: ''
         })
-        submit(tasks);
     }
 
-
     render() {
-        const { inputValue } = this.state
+        const {inputValue} = this.state;
+
 
         return (
-            <div className='todoInput'>
+            <div className={styles.todoInput}>
                 <input
                     type="text"
                     placeholder="Input ToDo"
@@ -37,13 +39,13 @@ class AddNewTask extends React.Component {
                     value={inputValue}
                 />
                 <button
-                    className="addInput"
-                    onClick={this.handleSubmit}
+                    className={styles.addInput}
+                    onClick={this.handleS}
                 >
                     Add
                 </button>
                 <button
-                    className="resetInput"
+                    className={styles.resetInput}
                     onClick={this.resetInput}
                 > Reset
                 </button>

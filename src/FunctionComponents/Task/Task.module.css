@@ -1,0 +1,31 @@
+.task {
+    border: 2px solid royalblue;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 30px;
+    background-color: royalblue;
+    color: aliceblue;
+    font-family: "Arial Unicode", sans-serif;
+    font-weight: bold;
+}
+
+
+.taskRemoveButton {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid royalblue;
+    border-radius: 10px;
+    background-color: firebrick;
+}
+.taskRemoveButton:hover {
+    background-color: aliceblue;
+}
+.taskP {
+    display: flex;
+    justify-content: center;
+}
+.removeButtonDiv {
+    text-align: center;
+}
