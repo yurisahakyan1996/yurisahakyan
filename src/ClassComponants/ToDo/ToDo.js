@@ -1,16 +1,15 @@
 import React, {Component} from 'react';
 import Task from '../../FunctionComponents/Task/Task';
 import AddNewTask from '../AddNewTask/AddNewTask';
-import styles from './ToDo.module.css';
-import { Container, Row, Col } from 'react-bootstrap';
+import {Container, Row, Col} from 'react-bootstrap';
 import IdGenerator from "../../IdGenerator/IdGenerator";
 
 class ToDo extends Component {
     state = {
         tasks: []
     }
-    handleSubmit = ( value ) => {
-        if(!value) return;
+    handleSubmit = (value) => {
+        if (!value) return;
         const tasks = [...this.state.tasks];
         tasks.push({
             id: IdGenerator(),
@@ -22,24 +21,39 @@ class ToDo extends Component {
     }
 
 
+    render() {
+        const { tasks }= this.state;
 
+        const Tasks = tasks.map((task) => {
+            return (
+                <Col
+                    key={IdGenerator()}
+                    className='d-flex justify-content-center mt-3'
+                    xs={12}
+                    md={6}
+                    xl={4}
+                >
+                    <Task
+                        task={task}
+                        key={IdGenerator()}
+                    />
+                </Col>
+            )
+        })
 
-    render () {
         return (
             <div>
-                <div>
-                    <AddNewTask handleSubmit={this.handleSubmit}/>
-                </div>
                 <Container>
-                    <Row className='justify-content-center'>
-                        <div className={styles.todoTasksList}>
-                            {!this.state.tasks.length && <div>todos is empty</div>}
-                            {this.state.tasks.map((task, index) => (
-                                <Col key={index} className='mt-3'>
-                                    <Task inputValue={task.text} />
-                                </Col>
-                            ))}
-                        </div>
+                    <Row className='mt-3'>
+                        <Col>
+                            <div>
+                                <AddNewTask handleSubmit={this.handleSubmit}/>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row className='mt-3'>
+                        {!tasks.length && <div>todos is empty</div>}
+                        {Tasks}
                     </Row>
                 </Container>
 

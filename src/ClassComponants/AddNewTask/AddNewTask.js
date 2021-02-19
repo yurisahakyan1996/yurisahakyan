@@ -1,5 +1,5 @@
-import React from 'react'
-import styles from './AddNewTask.module.css'
+import React from 'react';
+import styles from './AddNewTask.module.css';
 
 class AddNewTask extends React.Component {
     state = {
@@ -41,12 +41,14 @@ class AddNewTask extends React.Component {
                 <button
                     className={styles.addInput}
                     onClick={this.handleS}
+                    disabled={!!!inputValue}
                 >
                     Add
                 </button>
                 <button
                     className={styles.resetInput}
                     onClick={this.resetInput}
+                    disabled={!!!inputValue}
                 > Reset
                 </button>
             </div>
