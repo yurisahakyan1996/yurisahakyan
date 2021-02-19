@@ -1,23 +1,20 @@
-import styles from './Task.module.css'
+import {Card, Button} from 'react-bootstrap'
 
 const Task = ( {inputValue, key} ) => {
 
 
     return (
 
-        <div
-            className={styles.task}
-        >
-            <div className={styles.taskP}>
-                <p>{inputValue}</p>
-            </div>
-            <div className={styles.removeButtonDiv}>
-                <button
-                    className={styles.taskRemoveButton}
-                >
-                    Remove task
-                </button>
-            </div>
+        <div>
+            <Card style={{ width: '18rem' }}>
+                <Card.Body>
+                    <Card.Title>{inputValue.slice(0, 10)}</Card.Title>
+                    <Card.Text>
+                        {inputValue}
+                    </Card.Text>
+                    <Button variant="danger" size='sm'> DELETE </Button>
+                </Card.Body>
+            </Card>
         </div>
     )
 }
